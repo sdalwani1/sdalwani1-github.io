@@ -1,0 +1,302 @@
+/*css for elements present in whole body tag*/
+body{
+  width: 100%;
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+  background: white;
+}
+/*main container css*/
+.container{
+  margin-left: 375px;
+  margin-right: 375px;
+  width: 1170px;
+  height: auto;
+}
+/*.container__nav css for full width*/
+.container__nav{
+  margin: 0;
+  width: 100%;
+}
+/*css for container__logo in navigation bar*/
+.container__nav .container__logo{
+  margin: 50px 505px 50px 0;
+  width: 170px;
+  height: auto;
+}
+/*css for ul used in navigation bar*/
+.container__nav ul{
+  display:inline-block;
+  margin: 0;
+  vertical-align:top;
+  padding: 65px 0 65px 0;
+  height: auto;
+}
+/*css for first li of ul, all other having left padding*/
+.container__nav-list > :first-child{
+  padding-left: 0 !important;
+}
+.container__nav li{
+  padding-left: 70px;
+  display: inline;
+}
+.container__nav li a{
+  color: black;
+  font-size: 16px;
+  text-decoration: none;
+  font-weight: 500;
+}
+.container__nav-item--active{
+  font-weight: bolder !important;
+}
+/*To hide hamburger button in larger screens*/
+.container__nav .container__menu-btn,
+.container__menu-icon{
+  display: none;
+}
+/*Banner Image and Heading CSS*/
+
+.banner{
+  width: 100%;
+  color: #333333;
+  background-image: url(images/hero-banner.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.banner__heading{
+  font-weight: bold;
+  font-size: 70px;
+  text-align: center;
+  margin-bottom: 25px;
+}
+.banner__h3-heading{
+  font-weight: 500;
+  font-size: 28px;
+  text-align: center;
+}
+.banner__content {
+  padding-top: 350px;
+  padding-bottom: 350px;
+}
+/*Default CSS for every section which needs top and bottom defined spaces*/
+.section {
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+/*about section container*/
+.about__container{
+  width: auto;
+  display: flex;
+  justify-content: space-between;
+}
+/*css for arranging about section in left and right*/
+.about__left{
+  width: 40%;
+}
+.about__right{
+  padding-left: 220px;
+  text-align: left !important;
+}
+.heading {
+  width: 100%;
+  font-weight: 600;
+  font-size: 36px;
+  text-align: center;
+  color: #333333;
+}
+/*css for the butons present on the webpage*/
+.btn {
+  font-weight: 500;
+  color: #333333;
+  font-size: 16px;
+  border: 2px solid #333333;
+  padding: 20px 40px;
+  border-radius: 4px;
+  margin-top: 50px;
+  display: inline;
+}
+.btn:hover {
+  background: #333333;
+  color: #ffffff;
+}
+.about__text {
+  font-weight: normal;
+  font-size: 18px;
+  color: #333333;
+}
+/*css for aligning images into rows equally*/
+.gallery__row .gallery__col {
+  display: inline-block;
+}
+.gallery__col img{
+  margin-right: auto;
+  margin-left: auto;
+  width: 364px;
+  height: auto;
+}
+.gallery{
+  background-color: #f7fbff;
+}
+.center{
+  text-align: center;
+}
+.contact__heading{
+  margin: 0;
+}
+.contact__content{
+  margin: 0;
+  padding: 34px 0;
+}
+.social-img{
+  margin-right: 10px;
+}
+/*css for footer*/
+.footer__content {
+  margin:0;
+  padding-top: 45px;
+  padding-bottom: 45px;
+  font-weight: light;
+  font-size: 16px;
+  color: #333333;
+}
+/*css for screen sizes below 1550px, 
+the given conditions for nav-bar in full width occupies 1920 pixels*/
+@media(max-width: 1550px){
+  body{
+    width: 100%;
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    background: white;
+    overflow-x: hidden;
+  }
+  .container{
+    margin: 0;
+    width: 100%;
+    height: auto;
+  }
+  /*css for navigation using hamburger menu*/
+  .container__nav {
+    box-shadow: 1px 1px 4px 0 rgba(0,0,0,.1);
+    position: absolute;
+    width: 100%;
+    z-index: 3;
+  }
+  .container__nav ul{
+    float: left;
+    margin: 0;
+    padding: 0 0 0 4%;
+    list-style: none;
+    overflow: hidden;
+  }
+  .container__nav li{
+    padding: 0;
+  }
+  .container__nav li a{
+    display: block;
+    padding: 0 0 25px 0 !important;
+    font-weight: 500;
+    border-right: 1px solid #f4f4f4;
+    text-decoration: none;
+  }
+  .container__nav-item--active{
+    font-weight: normal !important;
+  }
+  .container__nav li a:hover,
+  .container__nav .container__menu-btn:hover{
+    background-color: #f4f4f4;
+  }
+  .container__nav .container__logo{
+    display: block;
+    height: auto;
+    float: left;
+    margin: 0;
+    padding: 25px 0 25px 30px;
+    text-decoration: none;
+  }
+  .container__nav .container__nav-list{
+    clear: both;
+    max-height: 0;
+    transition: max-height .2s ease-out;
+  }
+  .container__nav .container__menu-icon{
+    cursor: pointer;
+    display: block;
+    float: right;
+    padding: 25px 30px 25px 0;
+    position: relative;
+    user-select: none;
+  }
+  .container__nav .container__menu-icon #bar{
+    display: block;
+    position: relative;
+    height: 30px;
+    width: 30px;
+    border: 1px solid #111111;
+    border-radius: 4px;
+    margin-top: 20%;
+    transition: background .2s ease-out;
+  }
+  .container__nav .container__menu-icon #bar:before,
+  .container__nav .container__menu-icon #bar:after{
+    display: block;
+    height: 100%;
+    position: absolute;
+    transition: all .2s ease-out;
+    width: 100%;
+    top: 6px;
+    left: 8px;
+  }
+  .container__nav .container__menu-btn{
+    display: none;
+  }
+  .container__nav .container__menu-btn:checked ~ .container__nav-list{
+    max-height: 175px;
+  }
+  .container__nav .container__menu-btn:checked ~ .container__menu-icon #bar{
+    background: transparent;
+  }
+  .section {
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+  .about__container{
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+  }
+  .about__left{
+    margin: 0 auto;
+  }
+  .about__right{
+    padding: 0;
+    margin: 10px 15px;
+  }
+  .btn {
+    font-weight: 500;
+    font-family: "Montserrat";
+    color: #333333;
+    font-size: 16px;
+    border: 2px solid #333333;
+    padding: 20px 40px;
+    border-radius: 4px;
+    margin-top: 50px;
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+  }
+  .gallery__row .gallery__col {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 0 !important;
+    margin: 20px auto;
+    height: auto;
+    width: auto;
+  }
+  .footer__content {
+    text-align: center;
+    padding-top: 45px;
+    padding-bottom: 45px;
+    font-weight: light;
+    font-size: 16px;
+    color: #333333;
+  }
+}
