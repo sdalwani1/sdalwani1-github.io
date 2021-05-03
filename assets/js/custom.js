@@ -323,6 +323,6 @@ jQuery(function () {
 $(document).ready(function(){
     $("#downloadButton").click(function (e) {
         e.preventDefault();
-        window.location.href = "assets/misc/ShubhamDalwaniResume.pdf";
+        window.location.href = window.location.origin+"/assets/misc/ShubhamDalwaniResume.pdf";
     });
 })
