@@ -320,3 +320,9 @@ jQuery(function () {
   }});
 
 });
+$(document).ready(function(){
+    $("#downloadButton").click(function (e) {
+        e.preventDefault();
+        window.location.href = "assets/misc/ShubhamDalwaniResume.pdf";
+    });
+})
